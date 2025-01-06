@@ -31,7 +31,7 @@ function startScanner() {
     });
 
     Quagga.onDetected(function(result) {
-        document.getElementById("name").innerText=result.codeResult.code;
+        document.getElementById("name").innerText = result.codeResult.code;
         console.log("Barcode erkannt: " + result.codeResult.code);
         alert("Barcode erkannt: " + result.codeResult.code);  
         Quagga.stop();  
