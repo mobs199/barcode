@@ -1,34 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Barcode Scanner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://unpkg.com/quagga/dist/quagga.min.js"></script>
 </head>
 <body>
     <form action="">
         <div>
-        <p>Name:</p>
-        <input type="text">
-    </div>        
-    <div>
-        <p>Adresse:</p>
-        <input type="text">
-    </div>        
-    <div>
-        <p>PLZ:</p>
-        <input type="text">
-    </div>
-    <div>
-        <p>Tel:</p>
-        <input type="text">
-    </div>
-    <input type="submit" name="" id="">
+            <p>Name:</p>
+            <input type="text" id="name" placeholder="Name eingeben">
+        </div>        
+        <div>
+            <p>Adresse:</p>
+            <input type="text" id="address" placeholder="Adresse eingeben">
+        </div>        
+        <div>
+            <p>PLZ:</p>
+            <input type="text" id="postalcode" placeholder="PLZ eingeben">
+        </div>
+        <div>
+            <p>Tel:</p>
+            <input type="text" id="phone" placeholder="Telefonnummer eingeben">
+        </div>
+        <input type="submit" value="Absenden" class="sub">
     </form>
 
-    <script src='main.js'></script>
+    <button id="scanButton">Barcode scannen</button>
+
+    <div id="scanner-container">
+        <video id="scanner" width="400" height="300" style="border: 1px solid black;" autoplay></video>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
