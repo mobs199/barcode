@@ -58,7 +58,6 @@ navigator.mediaDevices.getUserMedia({ video: true })
     html5QrcodeScanner.render(onScanSuccess);
 
     function deleteElement() {
-        // Select the first <p> tag and remove it
         var element = document.getElementsByTagName("a")[0];
         element.remove();
     }
