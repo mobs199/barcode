@@ -18,7 +18,7 @@ function startScanner() {
             }
         },
         decoder: {
-            readers: ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader"]  // Gängige Barcode-Leser
+            readers: ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader"] 
         }
     }, function(err) {
         if (err) {
@@ -27,20 +27,20 @@ function startScanner() {
             return;
         }
         console.log("Scanner ist bereit.");
-        Quagga.start();  // Startet den Scan-Prozess
+        Quagga.start();  
     });
 
     Quagga.onDetected(function(result) {
         console.log("Barcode erkannt: " + result.codeResult.code);
-        alert("Barcode erkannt: " + result.codeResult.code);  // Zeigt den Barcode an
-        Quagga.stop();  // Stoppt den Scanner nach der Erkennung
+        alert("Barcode erkannt: " + result.codeResult.code);  
+        Quagga.stop();  
     });
 }
 
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(function(stream) {
         console.log('Kamera zugänglich!');
-        // Zeige den Stream in einem Video-Element an
+
         const video = document.querySelector('video');
         video.srcObject = stream;
     })
