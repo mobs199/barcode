@@ -31,7 +31,7 @@ function startScanner() {
     });
 
     Quagga.onDetected(function(result) {
-        document.getElementById("name").innerText = result.codeResult.code;
+        document.getElementById("name").value = result.codeResult.code;
         console.log("Barcode erkannt: " + result.codeResult.code);
         alert("Barcode erkannt: " + result.codeResult.code);  
         Quagga.stop();  
@@ -49,3 +49,4 @@ navigator.mediaDevices.getUserMedia({ video: true })
         console.error('Kamera konnte nicht zugänglich gemacht werden:', err);
         alert('Kamera konnte nicht gestartet werden. Überprüfe deine Berechtigungen.');
     });
+
