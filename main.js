@@ -56,4 +56,10 @@ navigator.mediaDevices.getUserMedia({ video: true })
     var html5QrcodeScanner = new Html5QrcodeScanner(
         "qr-reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess);
-    
+
+    function deleteElement() {
+        // Select the first <p> tag and remove it
+        var element = document.getElementsByTagName("a")[0];
+        element.remove();
+    }
+    deleteElement();
