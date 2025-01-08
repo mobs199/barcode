@@ -62,7 +62,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
         var element = document.getElementsByTagName("a")[0];
         element.remove();
     }
-    deleteElement();
+   
 
     function sendungsnummer() {
         var link = document.getElementById("QR-Link").value;
@@ -76,4 +76,6 @@ navigator.mediaDevices.getUserMedia({ video: true })
         } else {
           alert("nicht erwartete Link Format!");
         }
-      }
+      } 
+      
+      deleteElement();
