@@ -85,6 +85,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
           document.getElementById("Sd-Nr").value = result[1];
         } else {
           alert("nicht erwartete Link Format!");
+          document.getElementById("QR-Link").value="";
         }
       } 
       document.getElementById("QR-Link").addEventListener("input", function() {
