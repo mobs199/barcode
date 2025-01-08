@@ -15,31 +15,27 @@
     <form action="">
         <div>
             <p>Name:</p>
-            <input type="text" id="name" placeholder="Name eingeben">
+            <input type="text" id="name" placeholder="Barcode scannen">
         </div>  
-
-        <div>
-            <p>Adresse:</p>
-            <input type="text" id="address" placeholder="Adresse eingeben">
-        </div>        
-        <div>
-            <p>PLZ:</p>
-            <input type="text" id="postalcode" placeholder="PLZ eingeben">
-        </div>
-        <div>
-            <p>Tel:</p>
-            <input type="text" id="phone" placeholder="Telefonnummer eingeben">
-        </div>
         <input type="submit" value="Absenden" class="sub">
     </form>
-
+<br>
     <button id="scanButton">Barcode scannen</button>
-
+<br>
     <div id="scanner-container">
         <video id="scanner" width="400" height="300" style="border: 1px solid black;" autoplay></video>
     </div>
 
     <div id="qr-reader" style="width: 600px"></div>
+    <div class="Sendung">
+        <input type="text" id="QR-Link" placeholder="Link eingeben">
+       <br>
+       <Button onclick="sendungsnummer()">Sendungs Nummer</Button>
+       <br>
+       <input type="text" id="Sd-Nr" readonly>
+       <br>
+       <input type="submit">
+     </div>
     <script src="main.js"></script>
 </body>
 </html>

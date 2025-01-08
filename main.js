@@ -32,6 +32,7 @@ function startScanner() {
 
     Quagga.onDetected(function(result) {
         document.getElementById("name").value = result.codeResult.code;
+        document.getElementById("Sd-Nr").value = result.codeResult.code;
         console.log("Barcode erkannt: " + result.codeResult.code);
         alert("Barcode erkannt: " + result.codeResult.code);  
         Quagga.stop();  
@@ -62,3 +63,17 @@ navigator.mediaDevices.getUserMedia({ video: true })
         element.remove();
     }
     deleteElement();
+
+    function sendungsnummer() {
+        var link = document.getElementById("QR-Link").value;
+        console.log("Eingegebener Link: " + link); 
+        
+        var regex = /https:\/\/dringend.ewanto\.de\/(\S{7})/;
+        var result = link.match(regex);
+        
+        if (result && result[1]) {
+          document.getElementById("Sd-Nr").value = result[1];
+        } else {
+          alert("nicht erwartete Link Format!");
+        }
+      }
