@@ -32,7 +32,7 @@ function startScanner() {
 
     Quagga.onDetected(function(result) {
         document.getElementById("name").value = result.codeResult.code;
-        document.getElementById("Sd-Nr").value = result.codeResult.code;
+        document.getElementById("QR-Link").value = result.codeResult.code;
         console.log("Barcode erkannt: " + result.codeResult.code);
         alert("Barcode erkannt: " + result.codeResult.code);  
         Quagga.stop();  
