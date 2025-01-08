@@ -1,51 +1,114 @@
-body, html {
-    height: 100%;
+/* General Reset */
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.Sendung {
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
     background-color: #f4f4f4;
+}
+
+/* Main Container for Forms */
+form, .Sendung {
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center; 
+    margin: 20px 0;
+    width: 350px;
 }
 
+/* Input Fields */
 input[type="text"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 14px;
 }
 
-button {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
+input[type="submit"], button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+input[type="submit"]:hover, button:hover {
+    opacity: 0.8;
+}
+
+/* Button Styling */
+button.scan-btn {
+    background-color: #4CAF50;
+    color: white;
 }
 
 input[type="submit"] {
     background-color: #008CBA;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #007bb5;
+/* Input Field for Read-Only */
+input[readonly] {
+    background-color: #e9ecef;
+}
+
+/* Scanner Container */
+#scanner-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#scanner {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* QR Reader */
+#qr-reader {
+    margin-top: 20px;
+}
+
+/* Center Elements Vertically and Horizontally */
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form, .Sendung {
+        width: 100%;
+    }
+
+    #scanner {
+        width: 100%;
+        height: auto;
+    }
 }
