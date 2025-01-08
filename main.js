@@ -39,6 +39,12 @@ function startScanner() {
     });
 }
 
+
+
+/************************************************** */
+
+
+
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(function(stream) {
         console.log('Kamera zugänglich!');
@@ -53,6 +59,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
 
     function onScanSuccess(decodedText, decodedResult) {
         console.log(`Code scanned = ${decodedText}`, decodedResult);
+        document.getElementById("QR-Link").value = decodedResult;
     }
     var html5QrcodeScanner = new Html5QrcodeScanner(
         "qr-reader", { fps: 10, qrbox: 250 });
@@ -63,6 +70,9 @@ navigator.mediaDevices.getUserMedia({ video: true })
         element.remove();
     }
    
+/********************************** */
+
+
 
     function sendungsnummer() {
         var link = document.getElementById("QR-Link").value;
