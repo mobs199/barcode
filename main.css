@@ -55,6 +55,7 @@ input[type="submit"]:hover, button:hover {
 button.scan-btn {
     background-color: #4CAF50;
     color: white;
+    width: 10%;
 }
 
 input[type="submit"] {
