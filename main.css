@@ -53,13 +53,13 @@ input[type="submit"]:hover, button:hover {
 
 /* Button Styling */
 button.scan-btn {
-    background-color: #4CAF50;
+    background-color: #64c3f3;
     color: white;
     width: 100%;
 }
 
 input[type="submit"] {
-    background-color: #699f37;
+    background-color: #5f7ade;
     color: white;
 }
 

@@ -1,5 +1,3 @@
-
-
 document.getElementById('scanButton').addEventListener('click', function() {
     startScanner();
 });
@@ -38,7 +36,6 @@ function startScanner() {
         Quagga.stop();  
     });
 }
-
 
 
 /************************************************** */
@@ -90,4 +87,10 @@ navigator.mediaDevices.getUserMedia({ video: true })
           alert("nicht erwartete Link Format!");
         }
       } 
-      sendungsnummer();
+      document.getElementById("QR-Link").addEventListener("input", function() {
+        if (this.value.trim() !== "") {
+            sendungsnummer();
+        }
+    });
+    
+    
