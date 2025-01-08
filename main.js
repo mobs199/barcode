@@ -90,4 +90,4 @@ navigator.mediaDevices.getUserMedia({ video: true })
           alert("nicht erwartete Link Format!");
         }
       } 
-      
+      sendungsnummer();
