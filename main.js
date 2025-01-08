@@ -64,11 +64,14 @@ navigator.mediaDevices.getUserMedia({ video: true })
     var html5QrcodeScanner = new Html5QrcodeScanner(
         "qr-reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess);
-
+/********************************** */
     function deleteElement() {
         var element = document.getElementsByTagName("a")[0];
-        element.remove();
-    }
+        var cam1= document.getElementById("scanner");
+        element.remove()
+        cam1.remove()
+        ;
+    }    deleteElement();
    
 /********************************** */
 
@@ -88,4 +91,4 @@ navigator.mediaDevices.getUserMedia({ video: true })
         }
       } 
       
-      deleteElement();
+  
