@@ -1,8 +1,5 @@
 
 
-/************************************************** */
-
-
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(function(stream) {
         console.log('Kamera zugänglich!');
@@ -23,10 +20,6 @@ navigator.mediaDevices.getUserMedia({ video: true })
         "qr-reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess);
 
-
-/********************************** */
-
-
     function deleteElement() {
         var element = document.getElementsByTagName("a")[0];
         var cam1= document.getElementById("scanner");
@@ -35,11 +28,6 @@ navigator.mediaDevices.getUserMedia({ video: true })
         ;
     }    deleteElement();
    
-
-/********************************** */
-
-
-
     function sendungsnummer() {
         var link = document.getElementById("QR-Link").value;
         console.log("Eingegebener Link: " + link); 
