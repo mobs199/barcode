@@ -41,7 +41,6 @@ function startScanner() {
 /************************************************** */
 
 
-
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(function(stream) {
         console.log('Kamera zugänglich!');
@@ -61,7 +60,11 @@ navigator.mediaDevices.getUserMedia({ video: true })
     var html5QrcodeScanner = new Html5QrcodeScanner(
         "qr-reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess);
+
+
 /********************************** */
+
+
     function deleteElement() {
         var element = document.getElementsByTagName("a")[0];
         var cam1= document.getElementById("scanner");
@@ -70,6 +73,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
         ;
     }    deleteElement();
    
+
 /********************************** */
 
 
@@ -88,13 +92,14 @@ navigator.mediaDevices.getUserMedia({ video: true })
         }
         console.log("1s")
       } 
-      /*document.getElementById("QR-Link").addEventListener("input", function() {
-        if (this.value.trim() !== "") {
-            sendungsnummer();
-        }
-    });*/
-    setInterval(
+      setInterval(
         sendungsnummer
         , 1000
         );
     
+      /*document.getElementById("QR-Link").addEventListener("input", function() {
+        if (this.value.trim() !== "") {
+            sendungsnummer();
+        }
+        });*/
+
