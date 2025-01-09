@@ -84,14 +84,17 @@ navigator.mediaDevices.getUserMedia({ video: true })
         if (result && result[1]) {
           document.getElementById("Sd-Nr").value = result[1];
         } else {
-          alert("nicht erwartete Link Format!");
           document.getElementById("QR-Link").value="";
         }
+        console.log("1s")
       } 
-      document.getElementById("QR-Link").addEventListener("input", function() {
+      /*document.getElementById("QR-Link").addEventListener("input", function() {
         if (this.value.trim() !== "") {
             sendungsnummer();
         }
-    });
-    
+    });*/
+    setInterval(
+        sendungsnummer
+        , 1000
+        );
     
