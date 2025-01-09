@@ -48,9 +48,4 @@ navigator.mediaDevices.getUserMedia({ video: true })
         , 1000
         );
     
-      /*document.getElementById("QR-Link").addEventListener("input", function() {
-        if (this.value.trim() !== "") {
-            sendungsnummer();
-        }
-        });*/
 
