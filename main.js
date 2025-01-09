@@ -24,7 +24,6 @@ navigator.mediaDevices.getUserMedia({ video: true })
         var cam1= document.getElementById("scanner");
    
         var link= document.getElementById("qr-reader__dashboard_section_swaplink");
-      link.remove()
         element.remove()
         cam1.remove()
         ;
