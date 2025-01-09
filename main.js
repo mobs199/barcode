@@ -44,8 +44,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
         console.log("1s")
       } 
       setInterval(
-        sendungsnummer
-        , 1000
+        sendungsnummer, 1000
         );
     
 
