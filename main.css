@@ -48,17 +48,18 @@ input[type="submit"], button {
 }
 
 input[type="submit"]:hover, button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
+    color: black !important;
 }
 
 button.scan-btn {
-    background-color: #5f7ade;
+    background-color: #fa6f41;
     color: white;
     width: 100%;
 }
 
 input[type="submit"] {
-    background-color: #5f7ade;
+    background-color: #fa5d27;
     color: white;
 }
 

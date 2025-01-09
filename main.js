@@ -81,7 +81,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
     function sendungsnummer() {
         var link = document.getElementById("QR-Link").value;
         console.log("Eingegebener Link: " + link); 
-        
+
         var regex = /https:\/\/dringend.ewanto\.de\/(\S{7})/;
         var result = link.match(regex);
         
@@ -90,6 +90,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
         } else {
           document.getElementById("QR-Link").value="";
         }
+        console.log("Sendungsnummer = "+result[1])
         console.log("1s")
       } 
       setInterval(
