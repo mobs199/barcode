@@ -9,7 +9,6 @@ navigator.mediaDevices.getUserMedia({ video: true })
     })
     .catch(function(err) {
         console.error('Kamera konnte nicht zugänglich gemacht werden:', err);
-        alert('Kamera konnte nicht gestartet werden. Überprüfe deine Berechtigungen.');
     });
 
     function onScanSuccess(decodedText, decodedResult) {
@@ -23,6 +22,9 @@ navigator.mediaDevices.getUserMedia({ video: true })
     function deleteElement() {
         var element = document.getElementsByTagName("a")[0];
         var cam1= document.getElementById("scanner");
+   
+        var link= document.getElementById("qr-reader__dashboard_section_swaplink");
+      link.remove()
         element.remove()
         cam1.remove()
         ;
